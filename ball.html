@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <form>
+        <img src="2.jpg" style="width: 500px;" id="img">
+        <p>Click here the ball will move</p>
+        <input type="button" onclick="moveRight()"; value="Click here">
+    </form>
+
+    <script>
+        var obj = null;
+        obj = document.getElementById('img');
+        function init() {
+            obj = document.getElementById('img');
+            obj.style.position = 'relative';
+
+            obj.style.left = '0px';
+        }
+        function moveRight() {
+
+            obj.style.left = parseInt(obj.style.left) + 50 + 'px';
+        }
+        window.onload = init();
+    </script>
+</body>
+</html>
